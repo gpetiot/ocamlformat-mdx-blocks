@@ -26,4 +26,5 @@
   (cmdliner (>= 1.0.0))
   (fmt (>= 0.8.7))
   (logs (>= 0.7.0))
+  mdx
   (ocamlformat :dev)))
