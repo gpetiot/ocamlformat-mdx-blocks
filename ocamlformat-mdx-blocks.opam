@@ -37,5 +37,5 @@ build: [
 ]
 dev-repo: "git+https://github.com/gpetiot/ocamlformat-mdx-blocks.git"
 pin-depends: [
-  [ "ocamlformat.dev" "git+https://github.com/ocaml-ppx/ocamlformat.git#50b646e6c238f558cdbf8bd6b6634b16f7e9ef6d" ]
+  [ "ocamlformat.dev" "git+https://github.com/ocaml-ppx/ocamlformat.git#fb005d5abc34bad8b7c39b9da04a16d997932a0d" ]
 ]
