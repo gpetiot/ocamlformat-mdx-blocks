@@ -24,8 +24,8 @@
     (>= 4.08)
     (< 4.15)))
   bos
-  (cmdliner (>= 1.0.0))
+  (cmdliner (>= 1.1.0))
   (fmt (>= 0.8.7))
   (logs (>= 0.7.0))
   mdx
-  (ocamlformat :dev)))
+  (ocamlformat (>= 0.21.0))))

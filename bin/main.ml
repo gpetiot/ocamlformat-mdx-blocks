@@ -64,13 +64,14 @@ let run (`Setup ()) (`Syntax syntax) (`File file) (`Force_output force_output)
   Hashtbl.iter (write_parts ~force_output) files;
   0
 
-let cmd =
-  let open Cmdliner in
-  let doc = "Format mdx blocks with ocamlformat." in
-  let exits = Term.default_exits in
-  ( Term.(
-      pure run $ Cli.setup $ Cli.syntax $ Cli.file $ Cli.force_output
-      $ Cli.output),
-    Term.info "ocamlformat-mdx-blocks" ~doc ~exits )
+let term =
+  Cmdliner.Term.(
+    const run $ Cli.setup $ Cli.syntax $ Cli.file $ Cli.force_output
+    $ Cli.output)
 
-let () = Cmdliner.Term.(exit_status @@ eval cmd)
+let info =
+  let doc = "Format mdx blocks with ocamlformat." in
+  Cmdliner.Cmd.info "ocamlformat-mdx-blocks" ~doc
+
+let cmd = Cmdliner.Cmd.v info term
+let () = exit @@ Cmdliner.Cmd.eval' cmd
