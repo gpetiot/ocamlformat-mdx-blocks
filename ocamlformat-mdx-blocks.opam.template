@@ -1,3 +1,0 @@
-pin-depends: [
-  [ "ocamlformat.dev" "git+https://github.com/ocaml-ppx/ocamlformat.git#08ac3c3d0a1e52b89a8fa300c8d7d7e73524be1d" ]
-]

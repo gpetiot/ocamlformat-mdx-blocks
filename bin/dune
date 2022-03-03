@@ -1,0 +1,4 @@
+(executable
+ (name main)
+ (public_name ocamlformat-mdx-blocks)
+ (libraries cmdliner bos fmt.cli fmt.tty logs.cli logs.fmt mdx))
